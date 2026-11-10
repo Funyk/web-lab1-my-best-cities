@@ -1,0 +1,36 @@
+// Костюк Артем, КН-42. Спільні значення дизайну успадкованої «Акустичної варти».
+$color-primary: #198438;
+$color-primary-dark: #0f6328;
+$color-primary-border: #116728;
+$color-text: #122034;
+$color-heading: #0d192b;
+$color-body: #526171;
+$color-muted: #667487;
+$color-white: #ffffff;
+$color-surface: #f5f9fc;
+$color-border: #dce6ef;
+$color-hero: #eaf1f7;
+$color-footer: #293945;
+$color-footer-text: #d1dce4;
+$color-success: #17632d;
+$color-success-surface: #dff1e4;
+$color-danger: #ba2929;
+$color-warning-surface: #fff0ef;
+$color-warning-border: #eea3a3;
+$color-warning-text: #92253a;
+$color-warning-class: #8b5700;
+$color-field-border: #cbd7e3;
+$color-focus: #d6a522;
+$space-xs: 4px;
+$space-sm: 8px;
+$space-md: 16px;
+$space-lg: 24px;
+$space-xl: 40px;
+$container-max: 1120px;
+$container-gutter: 16px;
+$radius: 5px;
+$transition-fast: 180ms;
+$font-family: Arial, Helvetica, sans-serif;
+$bp-tablet: 768px;
+// Описова межа методички: tablet включає 1024px; desktop починається з 1025px.
+$bp-desktop: 1025px;

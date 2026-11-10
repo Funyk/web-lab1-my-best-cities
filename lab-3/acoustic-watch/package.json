@@ -1,0 +1,14 @@
+{
+  "name": "acoustic-watch-lab-3",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ЛР3: адаптивний сайт «Акустична варта», SCSS, Flexbox і Grid.",
+  "author": "Костюк Артем, КН-42",
+  "scripts": {
+    "build": "sass --style=expanded --no-source-map scss/main.scss css/main.css",
+    "watch": "sass --watch --style=expanded --no-source-map scss/main.scss:css/main.css"
+  },
+  "devDependencies": {
+    "sass": "1.108.1"
+  }
+}
