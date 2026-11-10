@@ -1,0 +1,16 @@
+Зображення: monitoring-hero.jpg
+Призначення: ілюстративний фон головного банера навчальної лабораторної роботи №2 «Акустична варта».
+Роботу підготовлено для: Костюк Артем, група КН-42.
+Походження: оригінальне зображення, створене за допомогою вбудованого інструмента OpenAI Image Generation 11.11.2026.
+Це згенерована ілюстрація. Вона не є фотографічним підтвердженням реальних вимірювань або конкретного об’єкта моніторингу.
+Сторонні фотографії не використано. Текстів, логотипів і водяних знаків на зображенні немає.
+Формат: JPEG, 2172 × 724 px. Перетворено з вихідного PNG у JPEG без кадрування або зміни композиції.
+
+Промпт для генерації:
+Use case: ads-marketing.
+Asset type: photographic background for a Ukrainian environmental acoustic monitoring website hero, one single image.
+Primary request: a wide calm urban noise monitoring photograph with a professional measurement microphone on the far right and a softly blurred city skyline behind it.
+Composition/framing: ultra-wide panoramic banner, 3:1 aspect ratio, approximately 1536 x 512 pixels. A black outdoor acoustic measurement microphone with oval black foam windscreen, narrow cylindrical metal stem, small unbranded mounting bracket, and dark vertical stand is in crisp focus at x=88% of the image. It extends from near the top edge down to the bottom edge. The microphone occupies only the rightmost 12% of image width. Behind it, muted modern residential towers, a few medium-height glass buildings and green trees are softly out of focus, concentrated in the bottom and right half. Keep the entire left 55% very pale white-blue and almost empty, fading smoothly into the scene, so dark headline text can later be overlaid as real HTML. There must be NO text in this image.
+Lighting/mood: natural soft daytime light, pale blue sky with subtle white clouds, quiet professional atmosphere.
+Style/medium: clean photorealistic commercial architectural product photography, realistic black foam texture and restrained cool neutral colors.
+Constraints: no people, no text, no logos, no watermark, no app interface, no labels, no sound waves, no charts, no dramatic lighting, no invented readable signage. This is an illustrative generated hero image, not documentary evidence of an actual monitoring site.

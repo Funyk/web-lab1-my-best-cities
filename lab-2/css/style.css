@@ -1,0 +1,537 @@
+/* Костюк Артем, КН-42. ЛР2: HTML/CSS, без Flexbox, Grid та JavaScript. */
+
+/* Універсальний селектор: padding і border входять у задані розміри. */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #122034;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+/* Групування селекторів елементів. */
+h1, h2, h3, p, ul {
+  margin-top: 0;
+}
+
+h1, h2, h3 {
+  color: #0d192b;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-bottom: 18px;
+  font-size: 2.65rem;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+}
+
+h2 {
+  margin-bottom: 15px;
+  font-size: 1.55rem;
+}
+
+h3 {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+/* Перше з трьох навмисно конфліктних правил color: (0, 0, 1). */
+p {
+  margin-bottom: 12px;
+  color: #526171;
+}
+
+a {
+  color: #17632d;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0c481d;
+}
+
+a:focus-visible, button:focus-visible {
+  outline: 3px solid #d6a522;
+  outline-offset: 4px;
+}
+
+.container {
+  width: 90%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.site-header {
+  padding: 22px 0;
+  border-bottom: 1px solid #e7edf2;
+  background: #ffffff;
+}
+
+.header-content, .card-row, .form-row, .footer-content {
+  font-size: 0;
+}
+
+.brand, .site-nav, .footer-brand, .footer-details {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1rem;
+}
+
+.brand {
+  width: 36%;
+  color: #0d192b;
+}
+
+.brand-name {
+  display: block;
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.brand-slogan {
+  display: block;
+  margin-top: 4px;
+  color: #667487;
+  font-size: 0.875rem;
+}
+
+.site-nav {
+  width: 64%;
+  text-align: right;
+}
+
+.site-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav li {
+  display: inline-block;
+  margin-left: 22px;
+}
+
+.nav-link {
+  display: inline-block;
+  padding: 7px 1px;
+  border-bottom: 2px solid transparent;
+  color: #233147;
+  font-size: 0.9rem;
+  transition: color 180ms ease, border-color 180ms ease;
+}
+
+.nav-link--active, .nav-link:hover {
+  border-bottom-color: #1b7f36;
+  color: #17632d;
+}
+
+.hero {
+  padding: 43px 0 45px;
+  background: #eaf1f7 url("../images/monitoring-hero.jpg") center center / cover no-repeat;
+}
+
+.hero-content {
+  width: 65%;
+  max-width: 720px;
+}
+
+.eyebrow {
+  margin-bottom: 16px;
+  color: #386745;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+/* Декоративний датчик: власна проста CSS-фігура, прихована від читачів екрана. */
+.sensor-mark {
+  position: relative;
+  display: inline-block;
+  width: 11px;
+  height: 18px;
+  margin: 0 12px 5px 2px;
+  border: 2px solid #1d6235;
+  border-radius: 7px;
+  background: #edf7ed;
+  vertical-align: middle;
+  transform: rotate(-12deg) translateY(2px);
+}
+
+.sensor-mark::after {
+  position: absolute;
+  bottom: -7px;
+  left: 2px;
+  width: 3px;
+  height: 6px;
+  background: #1d6235;
+  content: "";
+}
+
+/* Селектор id застосовано до реального опису компанії. */
+#company-description {
+  max-width: 550px;
+  margin-bottom: 24px;
+}
+
+#company-description p {
+  margin-bottom: 0;
+  color: #35485b;
+  font-size: 1rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 1px solid #116728;
+  border-radius: 5px;
+  background: #198438;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.button:hover {
+  border-color: #0c4c1b;
+  background: #0f6328;
+  color: #ffffff;
+  box-shadow: 0 4px 12px #17462a26;
+}
+
+.main-content {
+  padding: 26px 0 34px;
+}
+
+.page-section {
+  margin-bottom: 26px;
+}
+
+.section-note {
+  margin: -5px 0 17px;
+  color: #667487;
+  font-size: 0.85rem;
+}
+
+/* Спільний клас карток: саме inline-block, а не Flexbox/Grid. */
+.card {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 18px;
+  border: 1px solid #dce6ef;
+  border-radius: 5px;
+  background: #f5f9fc;
+  vertical-align: top;
+  font-size: 0.9rem;
+  transition: background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.card:hover {
+  border-color: #a7cdb5;
+  background: #f0f8f2;
+  box-shadow: 0 5px 14px #294b3b0d;
+}
+
+/* Box Model картки: width/height містять padding і border. */
+.monitor-card {
+  box-sizing: border-box;
+  width: 19%;
+  height: 152px;
+  margin-right: 1.25%;
+}
+
+.card-label {
+  margin-bottom: 9px;
+  color: #5b6879;
+  font-size: 0.78rem;
+}
+
+.metric-value {
+  display: block;
+  color: #0d192b;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.metric-value--text {
+  font-size: 0.97rem;
+}
+
+.unit {
+  display: inline;
+}
+
+.card-detail {
+  margin: 13px 0 0;
+  font-size: 0.74rem;
+  line-height: 1.4;
+}
+
+.status {
+  display: block;
+  margin-top: 10px;
+  padding: 3px 7px;
+  border-radius: 3px;
+  font-size: 0.8rem;
+}
+
+.status--normal {
+  background: #dff1e4;
+  color: #17632d;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 5px;
+  border-radius: 50%;
+  background: #208640;
+  vertical-align: middle;
+}
+
+.service-card {
+  width: 23.5%;
+  min-height: 126px;
+  margin-right: 2%;
+}
+
+.service-card p {
+  margin-bottom: 0;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.card--last {
+  margin-right: 0;
+}
+
+.warning {
+  position: relative;
+  margin: 0 0 27px;
+  padding: 20px 104px 20px 22px;
+  border: 1px solid #eea3a3;
+  border-radius: 5px;
+  background: #fff0ef;
+}
+
+.warning h2 {
+  margin-bottom: 8px;
+  color: #ad2626;
+  font-size: 1.35rem;
+}
+
+.warning-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: inline-block;
+  padding: 5px 9px;
+  border: 1px solid #eab2ae;
+  border-radius: 4px;
+  background: #ffe1de;
+  color: #9b2525;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+/* Друге конфліктне правило: id (1, 0, 0) перемагає p та клас нижче. */
+#noise-warning {
+  color: #92253a;
+}
+
+/* Третє правило розташоване пізніше, але клас (0, 1, 0) слабший за id. */
+.warning-message {
+  margin-bottom: 0;
+  color: #8b5700;
+  font-size: 0.85rem;
+}
+
+.table-container {
+  overflow-x: auto;
+  border: 1px solid #d8e2eb;
+  border-radius: 5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.84rem;
+  text-align: left;
+}
+
+caption {
+  padding: 9px 14px;
+  background: #fafcfd;
+  color: #657386;
+  font-size: 0.75rem;
+  text-align: left;
+}
+
+th, td {
+  padding: 9px 14px;
+  border-right: 1px solid #e0e7ef;
+  border-bottom: 1px solid #e0e7ef;
+  line-height: 1.4;
+}
+
+th {
+  background: #e9eff4;
+  color: #253346;
+  font-weight: 700;
+}
+
+td:last-child, th:last-child {
+  border-right: 0;
+}
+
+tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+tbody tr:hover {
+  background: #f7fafc;
+}
+
+.level--high, .required-mark {
+  color: #ba2929;
+}
+
+.level--normal {
+  color: #1b7533;
+}
+
+.order-section {
+  margin-bottom: 0;
+}
+
+.form-column {
+  display: inline-block;
+  width: 31.6%;
+  margin-right: 2.6%;
+  vertical-align: top;
+  font-size: 0.85rem;
+}
+
+.form-column--last {
+  margin-right: 0;
+}
+
+.form-field {
+  margin-bottom: 14px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  color: #233147;
+  font-size: 0.82rem;
+}
+
+input, select, textarea {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd7e3;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #233147;
+  font-family: inherit;
+  font-size: 0.85rem;
+  line-height: 1.35;
+}
+
+input, select {
+  height: 42px;
+}
+
+textarea {
+  min-height: 122px;
+  resize: vertical;
+}
+
+/* Селектор атрибута виділяє саме поле електронної пошти. */
+input[type="email"] {
+  border-color: #b2c9bf;
+  background: #fcfffd;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #247e40;
+  outline: 2px solid #bfddc7;
+  outline-offset: 1px;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #788698;
+  opacity: 1;
+}
+
+.required-note {
+  margin: -2px 0 14px;
+  color: #6c798a;
+  font-size: 0.75rem;
+}
+
+.site-footer {
+  padding: 30px 0;
+  background: #293945;
+  color: #ffffff;
+}
+
+.footer-brand {
+  width: 44%;
+  vertical-align: top;
+}
+
+.footer-brand .brand-name {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.site-footer p {
+  margin-bottom: 6px;
+  color: #d1dce4;
+  font-size: 0.78rem;
+}
+
+.footer-details {
+  width: 56%;
+  text-align: right;
+  vertical-align: top;
+}
+
+.site-footer nav {
+  margin-bottom: 15px;
+}
+
+.site-footer nav a {
+  display: inline-block;
+  margin-left: 22px;
+  color: #ffffff;
+  font-size: 0.82rem;
+}
+
+.site-footer nav a:hover {
+  text-decoration: underline;
+}
+
+.contact-email {
+  display: inline;
+  color: #ffffff;
+}
