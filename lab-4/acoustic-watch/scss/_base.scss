@@ -1,0 +1,118 @@
+@use "settings" as s;
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  background: s.$color-white;
+  color: s.$color-text;
+  font-family: s.$font-family;
+  font-size: 1rem;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+h1, h2, h3, p, ul {
+  margin-top: 0;
+}
+
+h1, h2, h3 {
+  color: s.$color-heading;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-bottom: s.$space-md;
+  font-size: clamp(1.9rem, 4.1vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: -0.6px;
+}
+
+h2 {
+  margin-bottom: s.$space-md;
+  font-size: clamp(1.3rem, 2.4vw, 1.55rem);
+}
+
+h3 {
+  margin-bottom: s.$space-sm;
+  font-size: 1rem;
+}
+
+// Базовий учасник збереженого конфлікту specificity: (0, 0, 1).
+p {
+  margin-bottom: 12px;
+  color: s.$color-body;
+}
+
+a {
+  color: s.$color-success;
+  text-decoration: none;
+
+  &:hover {
+    color: s.$color-primary-dark;
+  }
+}
+
+a:focus-visible, button:focus-visible, [tabindex="0"]:focus-visible {
+  outline: 3px solid s.$color-focus;
+  outline-offset: s.$space-xs;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+input, select, textarea {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid s.$color-field-border;
+  border-radius: s.$radius;
+  background: s.$color-white;
+  color: s.$color-text;
+  font-size: 1rem;
+  line-height: 1.4;
+
+  &:focus {
+    border-color: #247e40;
+    outline: 2px solid #bfddc7;
+    outline-offset: 1px;
+  }
+}
+
+input, select {
+  min-height: 46px;
+}
+
+textarea {
+  min-height: 144px;
+  resize: vertical;
+}
+
+input[type="email"] {
+  border-color: #b2c9bf;
+  background: #fcfffd;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #788698;
+  opacity: 1;
+}

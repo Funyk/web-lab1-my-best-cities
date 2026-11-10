@@ -1,0 +1,15 @@
+{
+  "name": "acoustic-watch-lab-4",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ЛР4: консольний аналіз вимірювань шуму у збереженому адаптивному сайті.",
+  "author": "Костюк Артем, КН-42",
+  "scripts": {
+    "build": "sass --style=expanded --no-source-map scss/main.scss css/main.css",
+    "watch": "sass --watch --style=expanded --no-source-map scss/main.scss:css/main.css",
+    "test": "node --test tests/monitoring.test.cjs"
+  },
+  "devDependencies": {
+    "sass": "1.108.1"
+  }
+}

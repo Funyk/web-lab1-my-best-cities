@@ -1,0 +1,22 @@
+// Костюк Артем, КН-42. Три повторно використовувані практичні шаблони.
+@use "variables" as v;
+
+@mixin respond-to($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin container {
+  width: calc(100% - #{v.$container-gutter * 2});
+  max-width: v.$container-max;
+  margin-inline: auto;
+}
+
+@mixin flex-layout($direction: row, $gap: v.$space-md, $align: center, $justify: flex-start) {
+  display: flex;
+  flex-direction: $direction;
+  gap: $gap;
+  align-items: $align;
+  justify-content: $justify;
+}

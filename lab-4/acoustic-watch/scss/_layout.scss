@@ -1,0 +1,189 @@
+@use "settings" as s;
+
+.container {
+  @include s.container;
+}
+
+.site-header {
+  padding-block: s.$space-md;
+}
+
+.header-content {
+  @include s.flex-layout(column, s.$space-md, stretch);
+}
+
+.brand, .site-nav, .footer-brand, .footer-details {
+  min-width: 0;
+}
+
+.site-nav ul {
+  @include s.flex-layout(row, s.$space-sm, center);
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hero {
+  background: s.$color-hero;
+}
+
+.hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.hero-content {
+  min-width: 0;
+  padding-block: s.$space-xl s.$space-lg;
+}
+
+.hero-image {
+  width: 100%;
+  height: 190px;
+  margin-bottom: s.$space-lg;
+  border-radius: s.$radius;
+  object-fit: cover;
+  object-position: right center;
+}
+
+#company-description {
+  max-width: 550px;
+  margin-bottom: s.$space-lg;
+}
+
+.main-content {
+  padding-block: s.$space-lg s.$space-xl;
+}
+
+.page-section {
+  margin-bottom: s.$space-lg;
+}
+
+// Точні сітки 1/2/5 та 1/2/4: auto-fit тут не підміняє задані стани.
+.card-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: s.$space-md;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: s.$space-md;
+}
+
+.form-column {
+  min-width: 0;
+}
+
+.order-section {
+  margin-bottom: 0;
+}
+
+.site-footer {
+  padding-block: s.$space-lg;
+}
+
+.footer-content {
+  @include s.flex-layout(column, s.$space-lg, stretch);
+}
+
+.site-footer nav {
+  @include s.flex-layout(row, s.$space-md, center);
+  flex-wrap: wrap;
+  margin-bottom: s.$space-md;
+}
+
+@include s.respond-to(s.$bp-tablet) {
+  .site-header {
+    padding-block: 22px;
+  }
+
+  .header-content {
+    @include s.flex-layout(row, s.$space-lg, center, space-between);
+    flex-wrap: wrap;
+  }
+
+  .brand {
+    flex: 0 1 270px;
+  }
+
+  .site-nav {
+    flex: 1 1 360px;
+  }
+
+  .site-nav ul {
+    justify-content: flex-end;
+  }
+
+  .hero {
+    background: s.$color-hero url("../assets/images/monitoring-hero.jpg") center center / cover no-repeat;
+  }
+
+  .hero-content {
+    width: 68%;
+    max-width: 720px;
+    padding-block: s.$space-xl;
+  }
+
+  .hero-image {
+    display: none;
+  }
+
+  .monitoring-row, .service-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .form-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .form-column--last {
+    grid-column: 1 / -1;
+  }
+
+  .footer-content {
+    @include s.flex-layout(row, s.$space-lg, flex-start, space-between);
+  }
+
+  .footer-brand, .footer-details {
+    flex: 1 1 0;
+  }
+
+  .footer-details {
+    text-align: right;
+  }
+
+  .site-footer nav {
+    justify-content: flex-end;
+  }
+}
+
+@include s.respond-to(s.$bp-desktop) {
+  .site-nav ul {
+    gap: s.$space-lg;
+  }
+
+  .hero-content {
+    width: 65%;
+    padding-block: 43px 45px;
+  }
+
+  .monitoring-row {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .service-row {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .form-row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: s.$space-lg;
+  }
+
+  .form-column--last {
+    grid-column: auto;
+  }
+}
