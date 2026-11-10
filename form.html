@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Костюк Артем, КН-42">
+  <title>Запропонувати місто | Мої 3 найкращі міста світу</title>
+</head>
+<body>
+  <header>
+    <p><strong>Мої 3 найкращі міста світу</strong> — особистий блог Артема Костюка</p>
+    <nav aria-label="Основна навігація">
+      <ul>
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="city-lviv.html">Львів</a></li>
+        <li><a href="city-shanghai.html">Шанхай</a></li>
+        <li><a href="city-tokyo.html">Токіо</a></li>
+        <li><a href="form.html" aria-current="page">Запропонувати місто</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Запропонувати місто</h1>
+    <p>Яке місто варто додати до наступної добірки? Розкажіть, чим воно вас зацікавило.</p>
+    <p id="demo-note"><strong>Навчальна форма.</strong> Вона перевіряє заповнення полів засобами браузера,
+      але не надсилає повідомлення автору й не зберігає заявки. Після успішної перевірки
+      сторінка відкриється знову, а введені значення з’являться в адресному рядку.
+      Для перевірки використовуйте вигадані дані, наприклад адресу reader@example.com.</p>
+    <p>Поля з позначкою «обов’язково» потрібно заповнити.</p>
+    <form action="form.html" method="get" aria-describedby="demo-note">
+      <fieldset>
+        <legend>Відомості про читача</legend>
+        <p>
+          <label for="reader-name">Ім’я (обов’язково)</label><br>
+          <input type="text" id="reader-name" name="reader_name" required minlength="2" maxlength="60" autocomplete="off">
+        </p>
+        <p>
+          <label for="reader-email">Електронна пошта (обов’язково)</label><br>
+          <input type="email" id="reader-email" name="reader_email" required maxlength="100" autocomplete="off" placeholder="reader@example.com">
+        </p>
+      </fieldset>
+      <fieldset>
+        <legend>Місто для наступної добірки</legend>
+        <p>
+          <label for="city-name">Назва міста (обов’язково)</label><br>
+          <input type="text" id="city-name" name="city" required minlength="2" maxlength="80">
+        </p>
+        <p>
+          <label for="country">Країна (обов’язково)</label><br>
+          <input type="text" id="country" name="country" required minlength="2" maxlength="80">
+        </p>
+        <p>
+          <label for="interest">Чим передусім цікаве місто? (обов’язково)</label><br>
+          <select id="interest" name="interest" required>
+            <option value="" selected disabled>Оберіть категорію</option>
+            <option value="culture">Культура й історія</option>
+            <option value="technology">Технології та сучасна архітектура</option>
+            <option value="pop-culture">Аніме, мистецтво й попкультура</option>
+            <option value="nature">Природа й міські парки</option>
+            <option value="other">Інша причина</option>
+          </select>
+        </p>
+        <fieldset>
+          <legend>Чи відвідували ви це місто? (обов’язково)</legend>
+          <p>
+            <input type="radio" id="visited-yes" name="visited" value="yes" required>
+            <label for="visited-yes">Так, відвідував або відвідувала</label><br>
+            <input type="radio" id="visited-no" name="visited" value="no" required>
+            <label for="visited-no">Ні, але місто мене цікавить</label>
+          </p>
+        </fieldset>
+        <p>
+          <label for="reason">Чому ви рекомендуєте це місто? (обов’язково, щонайменше 20 символів)</label><br>
+          <textarea id="reason" name="reason" rows="6" cols="36" required minlength="20" maxlength="1200"></textarea>
+        </p>
+      </fieldset>
+      <p>
+        <button type="submit">Перевірити пропозицію</button>
+        <button type="reset">Очистити форму</button>
+      </p>
+    </form>
+    <p><a href="index.html">Повернутися на головну</a></p>
+  </main>
+  <footer>
+    <p>Автор: Костюк Артем, група КН-42.</p>
+    <p>Лабораторна робота №1 з дисципліни «Веб-програмування». 2026 рік.</p>
+  </footer>
+</body>
+</html>
